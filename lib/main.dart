@@ -23,10 +23,6 @@ class MyApp extends StatelessWidget {
       routerDelegate: router.routerDelegate,
       title: 'Direp', // Optionally, add app title and theme as well
       theme: ThemeData(),
-      locale: const Locale('ko', 'KR'), // 기본 로케일을 한국어로 설정
-      supportedLocales: const [
-        Locale('ko', 'KR'), // 한국어
-      ],
     );
   }
 }

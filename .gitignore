@@ -45,4 +45,5 @@ app.*.map.json
 /android/app/release
 .metadata
 
+#git ignore 전 file cahce 되 있는지 확인 : git rm --cached .env 
 .env

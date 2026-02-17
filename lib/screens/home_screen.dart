@@ -18,6 +18,12 @@ class HomeScreen extends StatelessWidget {
           TextButton(
             onPressed: () async {
               await supabase.auth.signOut();
+              if (context.mounted) {
+                Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (_) => const LoginScreen()),
+                  (route) => false,
+                );
+              }
             },
             child: const Text('Sign out'),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:untitled/features/login/google_sign_in.dart';
+import 'package:untitled/screens/methoad_channel.dart';
 
 import 'home_screen.dart';
 
@@ -27,6 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => const HomeScreen()),
+        );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const MethodChannelScreen()),
         );
       }
     });

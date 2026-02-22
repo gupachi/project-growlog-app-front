@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:untitled/screens/login_screen.dart';
+import 'bloc/counter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +27,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'GrowLOG',
       theme: ThemeData(),
-      home: const LoginScreen(), // 시작 화면
+      home: MultiBlocProvider(
+        providers: [BlocProvider(create: (context) => CounterBloc())],
+        child: LoginScreen(),
+      ),
     );
   }
 }

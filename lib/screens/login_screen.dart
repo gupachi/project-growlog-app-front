@@ -25,10 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (session != null) {
         // 로그인 성공
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (_) => const HomeScreen()),
-        );
+
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (_) => const MethodChannelScreen()),
